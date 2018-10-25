@@ -6,12 +6,13 @@ If you have another input list you would like to have tested or you would like u
 
 Accuracy is calculated from total searched emails
 
-| Service | Email Searched | Emails Found | Accuracy |
+| Service | Email Searched | Emails Found | Correct Email Found |
 |---------|----------------|--------------|----------|
-|[Email Gardener](https://gardener.gg) | 25 | 24 | 20% |
-|[Hunter](https://hunter.io) | 25 | 22 | 70% |
-|[Snov](https://snov.io) | 25 | 2 | 8% |
-|[Anymailfinder](https://anymailfinder.com) | 25 | 14 | 52% |
+|[Email Gardener](https://gardener.gg) | 385 | 330 | 123 |
+|[Hunter](https://hunter.io) | 385 | 96 | 66 |
+|[Anymailfinder](https://anymailfinder.com) | 385 | 58 | 51 |
+|[Snov](https://snov.io) | 385 | 85 | 49 |
+|[Findemails](https://findemails.com)| 385 | 303 | 67 |
 
 Numbers are hard to believe if you have not calculated them yourself, we agree and hence included the simple script in the repo. For privacy reasons we did not include our input dataset of names but we expect similar results if you simply validate with your existing known true list. 
 
