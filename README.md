@@ -21,7 +21,7 @@ Numbers are hard to believe if you have not calculated them yourself, we agree a
 
 1. Clone the repository with 
     ```
-    git clone https://github.com/Gardener-gg/analytics.git
+    git clone https://github.com/Gardener-gg/email-lookup-benchmark.git
     ```
 
 2. Move to project directory
