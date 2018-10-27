@@ -202,6 +202,7 @@ output in their docs
 - True metered billing with no monthly cap or minimum monthly charge.
 - 0 API call = $0 bill
 #### Cons
+- New in competition
 - No free plan
 #### Sample Json output for email finder
 ```json
