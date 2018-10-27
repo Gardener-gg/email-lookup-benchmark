@@ -45,8 +45,6 @@ You will also need to provide the input csv file containing `domain`, `first_nam
 
 ## Qualitative Email Lookup API comparison
 
-Put example json outputs for all of them
-
 ### Hunter
 #### Pros
 #### Cons
