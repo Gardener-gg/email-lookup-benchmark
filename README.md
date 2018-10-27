@@ -47,7 +47,11 @@ You will also need to provide the input csv file containing `domain`, `first_nam
 
 ### Hunter
 #### Pros
+- Amount of data retured is more.
+- Result accuracy is decent.
 #### Cons
+- No metered billing
+- Unused credits are not rolled over to next month
 #### Sample JSON output for email finder
 ```json
 {
@@ -90,6 +94,7 @@ You will also need to provide the input csv file containing `domain`, `first_nam
 - Lets monthly allowance to roll over if you do not use it.
 - Claims to not charge for pattern matched emails
 #### Cons
+- No metered billing
 #### Sample JSON output for email finder
 ```json
 {
@@ -114,6 +119,8 @@ You will also need to provide the input csv file containing `domain`, `first_nam
 - Credit based payment scheme and don't push too hard into setting up recurring payments
 #### Cons
 - Generated token expires in 1 hr so you have to refresh it everytime
+- No metered billing
+- Unused credits are not rolled over to next month
 #### Sample Json output for email finder
 ```json
 {
@@ -195,6 +202,7 @@ output in their docs
 - True metered billing with no monthly cap or minimum monthly charge.
 - 0 API call = $0 bill
 #### Cons
+- No free plan
 #### Sample Json output for email finder
 ```json
 {
