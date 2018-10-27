@@ -50,12 +50,65 @@ Put example json outputs for all of them
 ### Hunter
 #### Pros
 #### Cons
+#### Sample JSON output for email finder
+```json
+{
+  "data": {
+    "first_name": "Dustin",
+    "last_name": "Moskovitz",
+    "email": "dustin@asana.com",
+    "score": 72,
+    "domain": "asana.com",
+    "position": "CEO",
+    "twitter": "moskov",
+    "linkedin_url": "https://www.linkedin.com/in/dmoskov",
+    "phone_number": null,
+    "company": "Asana",
+    "sources": [
+      {
+        "domain": "blog.asana.com",
+        "uri": "http://blog.asana.com",
+        "extracted_on": "2015-09-27",
+        "last_seen_on": "2017-09-01",
+        "still_on_page": true
+      },
+      ...
+    ]
+  },
+  "meta": {
+    "params": {
+      "first_name": "Dustin",
+      "last_name": "Moskovitz",
+      "full_name": null,
+      "domain": "asana.com",
+      "company": null
+    }
+  }
+}
+```
 
 ### Anymailfinder
 #### Pros
 - Lets monthly allowance to roll over if you do not use it.
 - Claims to not charge for pattern matched emails
 #### Cons
+#### Sample JSON output for email finder
+```json
+{
+  "email": "jsmith@acme.com",
+  "email_class": "verified",
+  "alternatives": [
+    "john@acme.com",
+    "smithj@acme.com"
+  ],
+  "input": {
+    "full_name": "John Smith",
+    "company_name": "Acme Inc"
+  },
+  "domain": "acme.com",
+  "status": "success"
+}
+```
 
 ### Snov
 #### Pros
@@ -63,6 +116,30 @@ Put example json outputs for all of them
 - Credit based payment scheme and don't push too hard into setting up recurring payments
 #### Cons
 - Generated token expires in 1 hr so you have to refresh it everytime
+#### Sample Json output for email finder
+```json
+{
+    "params":{
+        "firstName":"gavin",
+        "lastName":"vanrooyen",
+        "domain":"octagon.com"
+    },
+    "data":{
+        "firstName":"gavin",
+        "lastName":"vanrooyen",
+        "emails":[
+            {
+            "email":"Gavin@octagon.com",
+            "emailStatus":"valid"
+            }
+        ]
+    },
+    "status":{
+        "identifier":"complete",
+        "description":"Emails search is completed"
+    }
+}
+```
 
 ### FindEmails (formerly Toofr)
 #### Pros
@@ -73,10 +150,65 @@ Put example json outputs for all of them
 - Mostly pattern matched emails
 - Extra effort by developer is required to go through all emails returned and decide which email is good enough.
 - Having breaking changes in their API output without any versioning. Definitely not desirable if you are using automated scripts in production with FindEmails API.
+### Sample Json output for email finder
+Following is a sample of Json output returned by FindEmails which is different from the 
+output in their docs
+```json
+{
+    "ryan@toofr.com": {
+        "confidence": 100,
+        "state": "high",
+        "email": "ryan@toofr.com",
+        "detail": [
+            {"description": "Mailserver score", "response": "+40"}, 
+            {"description": "Pattern score", "response": "+27"}, 
+            {"description": "MX records score", "response": "+10"}, 
+            {"description": "Catchall score", "response": "+10"}, 
+            {"description": "Uniqueness score", "response": "+2"}, 
+            {"description": "List score", "response": "+2"}, 
+            {"description": "Name score", "response": "+2"}, 
+            {"description": "Disposable score", "response": "+2"}, 
+            {"description": "Gibberish score", "response": "+2"}
+        ],
+    },
+    ...
+    "employee": {
+        "first_name": "ryan",
+        "last_name": "buckley",
+        "title": "founder",
+        "profile": {
+            "fn":"Ryan Buckley",
+            "photo":"https://media.licdn.com/dms/image/C4D03AQFIi292VtKikw/profile-displayphoto-shrink_200_200/0?e=1536192000&v=beta&t=aXWOwRlu17VF_r96euIeWvX00I8OYfOrwhaK-Xbmksg",
+            "title":"Builder of ToOfr, Inlistio, and Voxloca. Author of The Parallel Entrepreneur. Resident of Contra Costa County.",
+            "linkedin_profile":"https://www.linkedin.com/in/rbuckley"
+        },
+            "email": {
+              "email": "ryan@toofr.com",
+              "confidence": 70,
+              "state": "high"
+        }
+    }
+} 
+```
 
 ### Gardener
 #### Pros
 - Developer oriented API only service
 - True metered billing with no monthly cap or minimum monthly charge.
 - 0 API call = $0 bill
-#### Cons 
+#### Cons
+#### Sample Json output for email finder
+```json
+{
+  "emails": [
+    {
+      "first_name": "John",
+      "last_name": "Wick",
+      "email": "john.wick@example.com",
+      "source_uri": ""
+    }
+  ],
+  "email_count": 1,
+  "company": "Example"
+}
+```
