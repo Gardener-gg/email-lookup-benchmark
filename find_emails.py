@@ -126,10 +126,10 @@ def find_emails(
             }
 
             # get the result from gardener
-            # write_row['gardener_result'] = gardener_email_finder(gardener_token, row)
+            write_row['gardener_result'] = gardener_email_finder(gardener_token, row)
             # get the result from hunter
-            # email, confidence = hunter.email_finder(**row)
-            # write_row['hunter_result'] = email
+            email, confidence = hunter.email_finder(**row)
+            write_row['hunter_result'] = email
             # get the result from snov
             write_row['snov_result'] = snov_email_finder(snov_token, row)
             #  get the result from anymail
