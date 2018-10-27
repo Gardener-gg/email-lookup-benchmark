@@ -1,4 +1,4 @@
-# Gardener Email Finder Benchmark
+# Email Finder Benchmark
 
 There are dozens of Email Lookup API's with little distinguish features. To help you chose we wrote a small benchmark script that tests top providers against known good and known bad emails. Our input list was sampled from Banking and IT in Europe. 
 
